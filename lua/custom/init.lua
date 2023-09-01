@@ -15,6 +15,7 @@ opt.shellcmdflag = "-command"
 opt.shellquote= "\""
 opt.shellxquote = ""
 opt.guifont = "JetBrainsMono Nerd Font Mono:h12"
+
 autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()

@@ -3,7 +3,11 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 local lspconfig = require "lspconfig"
 
-local simple_servers = { "html", "cssls" }
+local simple_servers = {
+  "html",
+  "cssls",
+  -- "bashls"
+}
 
 for _, server in ipairs(simple_servers) do
   lspconfig[server].setup {
@@ -13,11 +17,6 @@ for _, server in ipairs(simple_servers) do
 end
 
 lspconfig.gopls.setup {
-  -- on_attach = function(client, bufnr)
-  --   on_attach(client, bufnr)
-  --   client.server_capabilities.documentFormattingProvider = true
-  --   client.server_capabilities.documentRangeFormattingProvider = true
-  -- end,
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -28,12 +27,12 @@ lspconfig.gopls.setup {
       -- symbolMatcher = "Fuzzy",
       staticcheck = true,
       completeUnimported = true,
-      usePlaceholders = true,
+      -- usePlaceholders = true,
       hints = {
         assignVariableTypes = true,
         constantValues = true,
         parameterNames = true,
-        rangeVariableTypes = true
+        rangeVariableTypes = true,
       },
     },
   },

@@ -2,6 +2,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      additional_vim_regex_highlighting = false,
+
       ensure_installed = {
         -- defaults
         "vim",
@@ -21,6 +23,7 @@ return {
         "zig",
         -- my custom stuff
         "go",
+        "bash",
       },
     },
   },
@@ -45,6 +48,7 @@ return {
     opts = {
       ensure_installed = {
         "lua-language-server",
+        "bash-language-server",
         "gopls",
         "goimports",
         "golines",
@@ -61,7 +65,7 @@ return {
       local cfg = require "plugins.configs.cmp"
       cfg.sources = {
         { name = "nvim_lsp" },
-        { name = "path"}
+        { name = "path" },
       }
       return cfg
     end,
