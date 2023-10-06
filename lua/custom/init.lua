@@ -10,6 +10,7 @@ opt.swapfile = false
 opt.scrolloff = 12
 opt.relativenumber = true
 opt.wrap = false
+opt.ff = "unix"
 opt.shell = "powershell"
 opt.shellcmdflag = "-command"
 opt.shellquote= "\""

@@ -6,7 +6,12 @@ local lspconfig = require "lspconfig"
 local simple_servers = {
   "html",
   "cssls",
-  -- "bashls"
+  "pyright",
+  "bashls",
+  "tsserver",
+  "yamlls",
+  "emmet_ls",
+  "jsonls"
 }
 
 for _, server in ipairs(simple_servers) do
