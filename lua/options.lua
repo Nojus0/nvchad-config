@@ -5,8 +5,6 @@ require "nvchad.options"
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
-
-
 local opt = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -29,9 +27,9 @@ opt.guifont = "JetBrainsMono Nerd Font Mono:h12"
 
 -- autocmd("BufWritePre", { pattern = "*.templ", callback = vim.lsp.buf.format })
 
-autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-    vim.lsp.buf.format { async = false }
-  end,
-})
+-- autocmd("BufWritePre", {
+--   pattern = "*.go",
+--   callback = function()
+--     vim.lsp.buf.format { async = false }
+--   end,
+-- })
